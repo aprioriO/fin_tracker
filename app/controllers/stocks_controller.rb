@@ -12,6 +12,5 @@ class StocksController < ApplicationController
       flash[:alert] = "Please enter a symbol to search"
       redirect_to my_portfolio_path
     end
-
   end
 end
