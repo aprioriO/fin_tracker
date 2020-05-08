@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_225614) do
+ActiveRecord::Schema.define(version: 2020_05_22_161250) do
 
   create_table "stocks", force: :cascade do |t|
     t.string "ticker"
     t.string "name"
     t.decimal "last_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_stocks", force: :cascade do |t|
+    t.string "user"
+    t.string "references"
+    t.string "stock"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
