@@ -26,4 +26,8 @@ class User < ApplicationRecord
     return "#{first_name} #{last_name}" if first_name || last_name
     "Anonymous"
   end
+
+  def self.matches(field_name, param)
+    where("#{field_name} like ?", "%#{param}%")
+  end
 end
