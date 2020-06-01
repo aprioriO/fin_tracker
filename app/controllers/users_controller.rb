@@ -3,4 +3,8 @@ class UsersController < ApplicationController
     @tracked_stocks = current_user.stocks
     #current_user is from devise gem documentation
   end
+
+  def my_friends
+    @friends = current_user.friends
+  end
 end
