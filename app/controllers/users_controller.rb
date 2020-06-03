@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     @friends = current_user.friends
   end
 
+  def show
+    # code
+  end
+
   def search
     if params[:friend].present?
       @friends = User.search(params[:friend])
