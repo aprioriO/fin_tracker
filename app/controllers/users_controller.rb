@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def my_portfolio
+    @user = current_user
     @tracked_stocks = current_user.stocks
     #current_user is from devise gem documentation
   end
