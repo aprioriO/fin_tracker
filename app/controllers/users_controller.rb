@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # code
+    @user = User.find(params[:id])
   end
 
   def search
